@@ -99,10 +99,14 @@ def join_tokens_transformer(X):
 #LSTM
 with open('./models/vocab_to_int.json', 'r') as f:
     vocab_to_int = json.load(f)
-
+    
 russian_stop_words = pd.read_csv('./pages/stopwords-ru.txt', header=None)
 russian_stop_words = set(russian_stop_words[0])
-stop_words = set(set(stopwords.words('english')).union(russian_stop_words))
+
+from nltk.corpus import stopwords
+english_stop_words = set(stopwords.words('english'))
+
+stop_words = english_stop_words.union(russian_stop_words)
 
 @dataclass
 class ConfigRNN:
