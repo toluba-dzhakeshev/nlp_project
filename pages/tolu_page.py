@@ -4,10 +4,10 @@ import json
 import time
 import torch
 from transformers import BertTokenizer, BertModel
-from dependecies import predict_with_bert
-from dependecies import (clean_text_transformer, tokenize_text_transformer, remove_stopwords_transformer,
+from models.dependecies import predict_with_bert
+from models.dependecies import (clean_text_transformer, tokenize_text_transformer, remove_stopwords_transformer,
                          lemmatize_tokens_transformer, join_tokens_transformer)
-from dependecies import ConfigRNN, LSTMClassifier, vocab_to_int, predict_sentence
+from models.dependecies import ConfigRNN, LSTMClassifier, vocab_to_int, predict_sentence
 
 #TF-IDF
 tfidf_model = joblib.load('./models/sentiment_model_pipeline.pkl')
