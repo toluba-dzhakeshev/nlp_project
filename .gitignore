@@ -1,0 +1,64 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+.env/
+
+# Streamlit
+.streamlit/
+
+# Data Files
+*.csv
+*.xlsx
+*.json
+*.txt
+
+# Model Files
+*.pth
+*.h5
+*.hdf5
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cache and Build Directories
+cache/
+build/
+dist/
+
+# Environment Files
+*.env
+
+# Temporary Files
+*.tmp
+*.bak
+
+# Large Files
+*.h5
+*.tar
+*.gz
+
+# Hugging Face Files
+*.safetensors
+
