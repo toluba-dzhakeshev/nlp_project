@@ -100,13 +100,13 @@ def join_tokens_transformer(X):
 with open('./models/vocab_to_int.json', 'r') as f:
     vocab_to_int = json.load(f)
     
+eng_stop_words = pd.read_csv('./pages/stopwords.txt', header=None)[0].tolist()
+eng_stop_words = set(eng_stop_words)
+
 russian_stop_words = pd.read_csv('./pages/stopwords-ru.txt', header=None)
 russian_stop_words = set(russian_stop_words[0])
 
-from nltk.corpus import stopwords
-english_stop_words = set(stopwords.words('english'))
-
-stop_words = english_stop_words.union(russian_stop_words)
+stop_words = eng_stop_words.union(russian_stop_words)
 
 @dataclass
 class ConfigRNN:
