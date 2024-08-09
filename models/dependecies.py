@@ -13,6 +13,8 @@ from torch import nn
 
 import torch
 
+nltk.download('stopwords')
+
 #TF-IDF
 morph = pymorphy3.MorphAnalyzer()
 russian_stop_words = set(stopwords.words('russian'))
